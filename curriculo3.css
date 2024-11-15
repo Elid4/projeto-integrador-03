@@ -1,0 +1,136 @@
+
+
+:root {
+    --cor-principal: #FF66B2; 
+    --cor-secundaria: #D5006D; 
+    --cor-terce: #FFF0F6; 
+    --cor-quarte: #333333; 
+    --cor-acento: #FF4081; 
+}
+
+body {
+    background-color: var(--cor-terce);
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: var(--cor-quarte);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-secundaria);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header h1{
+   color: var(--cor-terce);
+}
+
+header ul li a {
+   
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: var(--cor-acento);
+}
+
+.secao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    margin: 20px auto;
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+.secao.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.secao img {
+    width: 40%;
+    height: auto;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.secao img.in-view {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.secao h2 {
+    color: var(--cor-secundaria);
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.secao p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+nav a.active {
+    color: var(--cor-acento);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-acento);
+    bottom: 0;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+#topButton {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#topButton.show {
+    opacity: 1;
+}
+
+button{
+    background-color:var(--cor-secundaria);
+    color: var(--cor-terce);
+    border-radius: 10px;
+}
+
+button:hover{
+    background-color: var(--cor-acento);
+    
+}
+
+input{
+    border-color: #D5006D;
+    
+}
